@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import App from '../components/App'
+import 'antd/dist/antd.css';
 
 
 // When you hit the Back button, it navigates the page to the
@@ -9,11 +10,12 @@ import App from '../components/App'
 const Index = () => {
   return (
     <div>
-      <App />
       <Link href="/about">
           {/*<a  style={{ fontSize: 20 }}>About Page</a>*/}
         <button  style={{ fontSize: 20 }}>About Page</button>
       </Link>
+      <App />
+      
     </div>
   );
 }
