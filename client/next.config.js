@@ -1,7 +1,7 @@
 const withCSS = require('@zeit/next-css');
-const withImages = require('next-images');
+const withOptimizedImages = require('next-optimized-images');
 
-module.exports = withCSS({
+module.exports = withCSS(withOptimizedImages({
   webpack(config, options) {
     const { isServer } = options;
     if (!options.defaultLoaders) {
@@ -19,8 +19,8 @@ module.exports = withCSS({
           options: {
             limit: 8192,
             fallback: "file-loader",
-            publicPath: '/_next/static/images',
-            outputPath: '/',
+            publicPath: '/_next/static/images/',
+            outputPath: 'static/images/',
             name: "[name]-[hash].[ext]"
           }
         }
@@ -33,5 +33,5 @@ module.exports = withCSS({
 
     return config
   }
-});
+}));
 
