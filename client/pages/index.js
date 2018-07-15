@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '../routes';
 import App from '../components/App'
 import 'antd/dist/antd.css';
 
@@ -10,7 +10,7 @@ import 'antd/dist/antd.css';
 const Index = () => {
   return (
     <div>
-      <Link href="/about">
+      <Link route="about">
           {/*<a  style={{ fontSize: 20 }}>About Page</a>*/}
         <button  style={{ fontSize: 20 }}>About Page</button>
       </Link>
