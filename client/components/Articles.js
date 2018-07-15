@@ -23,10 +23,11 @@ class Articles extends Component {
                       marginBottom: '10px',
                     }}
                   />
-                  
-                  <h3> หัวเรื่องข่าวสาร/บทความ </h3>
-                  <p style={{marginBottom: 0, color: 'black'}}>01/01/18</p>
-                  รายละเอียดเนื้อหาาาาาากดาพนาดนพำาเนพำเานำพาเนำพเ่าำนพเ่าำรพนเ่รพำเ้ืำร้นพเืรพนำเืำรนพ
+                  <div className='title_blog'>
+                    <h3> หัวเรื่องข่าวสาร/บทความ </h3>
+                    <p style={{marginBottom: 0}}>01/01/18</p>
+                    รายละเอียดเนื้อหาาาาาากดาพนาดนพำาเนพำเานำพาเนำพเ่าำนพเ่าำรพนเ่รพำเ้ืำร้นพเืรพนำเืำรนพ
+                  </div>
                 </a>
               </Link>
           </Col>
@@ -44,8 +45,10 @@ class Articles extends Component {
                         marginBottom: '10px',
                       }}
                     />
-                    <h3> หัวเรื่องข่าวสาร/บทความ </h3>
-                    <p style={{marginBottom: 0}}>01/01/18</p>
+                    <div className='title_blog'>
+                      <h3> หัวเรื่องข่าวสาร/บทความ </h3>
+                      <p style={{marginBottom: 0}}>01/01/18</p>
+                    </div>
                   </a>
                 </Link>
                 </Col>
@@ -58,8 +61,10 @@ class Articles extends Component {
                       marginBottom: '10px',
                     }}
                   />
-                  <h3> หัวเรื่องข่าวสาร/บทความ </h3>
-                  <p style={{marginBottom: 0}}>01/01/18</p>
+                  <div className='title_blog'>
+                    <h3> หัวเรื่องข่าวสาร/บทความ </h3>
+                    <p style={{marginBottom: 0}}>01/01/18</p>
+                  </div>
                 </Col>
                 <Col span={11} style={{ border: '1px solid', marginTop:'5px'}}>
                   <img
@@ -70,8 +75,10 @@ class Articles extends Component {
                       marginBottom: '10px',
                     }}
                   />
-                  <h3> หัวเรื่องข่าวสาร/บทความ </h3>
-                  <p style={{marginBottom: 0}}>01/01/18</p>
+                  <div className='title_blog'>
+                    <h3> หัวเรื่องข่าวสาร/บทความ </h3>
+                    <p style={{marginBottom: 0}}>01/01/18</p>
+                  </div>
                 </Col>
                 <Col span={11} style={{ border: '1px solid', marginTop:'5px'}}>
                   <img
@@ -82,8 +89,10 @@ class Articles extends Component {
                       marginBottom: '10px',
                     }}
                   />
-                  <h3> หัวเรื่องข่าวสาร/บทความ </h3>
-                  <p style={{marginBottom: 0}}>01/01/18</p>
+                  <div className='title_blog'>
+                    <h3> หัวเรื่องข่าวสาร/บทความ </h3>
+                    <p style={{marginBottom: 0}}>01/01/18</p>
+                  </div>
                 </Col>
               
             </Row>
