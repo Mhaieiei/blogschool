@@ -7,6 +7,7 @@ import NavBar from '../components/NavBar'
 import SlidePicture from '../components/SlidePicture'
 import Shortcut from '../components/Shortcut'
 import Articles from '../components/Articles'
+import Instructors from '../components/Instructors'
 
 
 const License = styled.div`
@@ -27,6 +28,7 @@ const Index = () => {
       <SlidePicture />
       <Shortcut />
       <Articles />
+      <Instructors />
       <div style={{ background: '#ddd', minHeight: 1080 }}>
       </div>
       <License>
