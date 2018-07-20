@@ -1,12 +1,20 @@
-// ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
-export default class MyDocument extends Document {
+export default class MyCustomDocument extends Document {
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet()
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
+    const styleTags = sheet.getStyleElement()
+    return { ...page, styleTags } // return styles collected
+  }
+
   render() {
     return (
       <html>
         <Head>
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <title>HMS</title>
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />
