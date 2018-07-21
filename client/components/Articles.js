@@ -8,7 +8,6 @@ class Articles extends Component {
   render() {
     return (
       <div>
-
         <h1 style={{ textAlign:'center', height: '10px'}}> บทความ </h1>
         <h1 style={{ textAlign:'center', color: '#FFA500'}}> ______ </h1>   
         <Row type="flex" justify="space-around" className='blog'>
@@ -97,10 +96,10 @@ class Articles extends Component {
               
             </Row>
           </Col>
-            <Link route='about'>
-              <a><h3 style={{marginTop: '25px', color: 'black'}}>...เพิ่มเติม</h3></a>
-            </Link>
         </Row>
+        <Link route='about'>
+          <a><h3 style={{marginTop: '25px', color: 'black', textAlign: 'center'}}>...เพิ่มเติม</h3></a>
+        </Link>
       </div>
     );
   }
