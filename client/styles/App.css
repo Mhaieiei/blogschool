@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .example {
@@ -29,3 +29,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.hover-underline-animation:hover::after {
+    /* background: #FFD23C; */
+    color: #707070;
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD23C;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
