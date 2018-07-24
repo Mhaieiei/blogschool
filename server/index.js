@@ -2,21 +2,22 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const env = require('dotenv');
+const mongoose = require('mongoose');
 
 env.config();
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const app = express();
 
-// mongoose.Promise = global.Promise;
-// mongoose.connect(process.env.MONGO_URL);
-// // connect to mongodb
-// mongoose.connection.once('connected', (err) => {
-//   if (err) {
-//     console.log('error cant connect to mongodb');
-//     return;
-//   }
-//   console.log('Connected to mongodb database');
-// });
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
+// connect to mongodb
+mongoose.connection.once('connected', (err) => {
+  if (err) {
+    console.log('error cant connect to mongodb');
+    return;
+  }
+  console.log('Connected to mongodb database');
+});
 
 
 // Uses+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
