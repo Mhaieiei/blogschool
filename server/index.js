@@ -1,12 +1,16 @@
 
 const express = require('express');
-const bodyparser = require('body-parser');
+// const bodyparser = require('body-parser');
 const env = require('dotenv');
 const mongoose = require('mongoose');
+const routesConfig = require('./routes');
 
 env.config();
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const app = express();
+
+// config route
+routesConfig(app);
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
