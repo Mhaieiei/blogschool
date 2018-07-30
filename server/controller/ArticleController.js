@@ -50,14 +50,19 @@ module.exports = {
   findAllArticle: (req, res) => {
     console.log('find all article');
     const query = {};
-    //start with page 0
+    // start with page 0
     const { limit, page } = req.query;
     ArticleModel.findAllArticle(query, parseInt(limit, 10), parseInt(page, 10))
       .then((result) => {
         console.log('result', result);
         res.send(result);
       })
-      .catch(err => res.send(err));
+      .catch(() => {
+        res.status(500).json({
+          code: 500,
+          description: 'Fail to find Article',
+        });
+      });
   },
 
 
