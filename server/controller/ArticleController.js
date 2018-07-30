@@ -17,10 +17,10 @@ module.exports = {
       .then((result) => {
         res.status(200).json(result);
       })
-      .catch((err) => {
+      .catch((error) => {
         res.status(400).json({
           msg: 'Fail to create article',
-          error: err.message,
+          error: error.message,
         });
       });
   },
@@ -39,10 +39,11 @@ module.exports = {
           });
         }
       })
-      .catch(() => {
+      .catch((error) => {
         res.status(500).json({
           code: 500,
           description: 'Fail to find Article',
+          error: error.message,
         });
       });
   },
@@ -54,13 +55,13 @@ module.exports = {
     const { limit, page } = req.query;
     ArticleModel.findAllArticle(query, parseInt(limit, 10), parseInt(page, 10))
       .then((result) => {
-        console.log('result', result);
         res.send(result);
       })
-      .catch(() => {
+      .catch((error) => {
         res.status(500).json({
           code: 500,
           description: 'Fail to find Article',
+          error: error.message,
         });
       });
   },
