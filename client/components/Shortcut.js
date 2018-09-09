@@ -1,6 +1,9 @@
 import { Row, Col } from 'antd'
 import styled from 'styled-components'
-// import Announce from './icons/announce'
+import Reserve from './icons/reserve'
+import Brochure from './icons/brochure'
+import Diagram from './icons/diagram'
+import Announce from './icons/announce'
 
 const Box = styled(Col)`
   display: flex;
@@ -11,29 +14,33 @@ const Box = styled(Col)`
   text-align: center;
 `
 
+const styles = {
+  iconStyle: {
+    width: 80,
+    height: 80,
+    padding: 10
+  }
+}
+
 const Shortcut = () => (
   <Row>
     <Box xs={24} md={6}>
-      {/* <Announce /> */}
-      <div style={{width: 32, height: 32, backgroundColor: '#000', padding: 10}}/>
+      <Reserve style={styles.iconStyle}/>
       <h2>จองเวลาเรียน</h2>
       <div>สำหรับนักเรียน S.E.L.F สามารถจองเวลาเรียนได้</div>
     </Box>
     <Box xs={24} md={6}>
-      {/* <Announce /> */}
-      <div style={{width: 32, height: 32, backgroundColor: '#000', padding: 10}}/>
+      <Brochure style={styles.iconStyle}/>
       <h2>โบชัวร์</h2>
       <div>คอร์สเรียนตามช่วงเวลาล่าสุด</div>
     </Box>
     <Box xs={24} md={6}>
-      {/* <Announce /> */}
-      <div style={{width: 32, height: 32, backgroundColor: '#000', padding: 10}}/>
+      <Diagram style={styles.iconStyle}/>
       <h2>แผนผังการเรียน</h2>
       <div>โครงสร้างการเรียนและรายละเอียดในแต่ละรายวิชา</div>
     </Box>
     <Box xs={24} md={6}>
-      {/* <Announce /> */}
-      <div style={{width: 32, height: 32, backgroundColor: '#000', padding: 10}}/>
+      <Announce style={styles.iconStyle}/>
       <h2>ประกาศคะแนนสอบ</h2>
       <div>ประกาศคะแนนสอบของรายวิชาที่มีการสอบ</div>
     </Box>
