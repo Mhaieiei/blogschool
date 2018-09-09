@@ -1,15 +1,27 @@
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Carousel } from 'antd'
 
-const DivStlye = styled.div`
+const CarouselStlye = styled(Carousel)`
   width: 100%;
   height: 600px;
-  background-color: salmon;
 `
 
-const SlidePicture = () => (
-  <DivStlye>
-    xx
-  </DivStlye>
-)
+class SlidePicture extends Component {
+  render() {
+    return (
+      <CarouselStlye autoplay>
+        {/* <div><img src="images/siberian.png"/>1</div>
+        <div><img src="images/siberian.png"/>2</div>
+        <div><img src="images/siberian.png"/>3</div>
+        <div><img src="images/siberian.png"/>4</div> */}
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+      </CarouselStlye>
+    )
+  }
+}
 
 export default SlidePicture
