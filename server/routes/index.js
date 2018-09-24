@@ -3,6 +3,7 @@ const ArticleRoutes = require('./ArticleRoutes');
 const BranchRoutes = require('./BranchRoutes');
 const InstructorRoutes = require('./InstructorRoutes');
 const AboutUsRoutes = require('./AboutUsRoutes');
+const GeniusRoutes = require('./GeniusRoutes');
 
 
 const routeConfig = (app) => {
@@ -10,6 +11,7 @@ const routeConfig = (app) => {
   app.use(`${process.env.URL_PREFIX}`, BranchRoutes);
   app.use(`${process.env.URL_PREFIX}`, InstructorRoutes);
   app.use(`${process.env.URL_PREFIX}`, AboutUsRoutes);
+  app.use(`${process.env.URL_PREFIX}`, GeniusRoutes);
 
   app.use(handlerError);
 
