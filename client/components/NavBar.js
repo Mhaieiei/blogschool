@@ -1,61 +1,51 @@
 import Link from 'next/link'
-import styled from 'styled-components'
-// import { Layout, Menu, Breadcrumb } from 'antd'
 
-// const { Header } = Layout
-const Header = styled.div`
-  background-color: white;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  line-height: 64px;
-  box-shadow: 0px 5px 20px #ddd;
-`
-const NavStyle = styled.div`
-  padding: 0px 20px;
-  &:hover {
-    background: #FFD23C;
-    color: #707070;
-    cursor: pointer;
+const styles = {
+  headerStyle: {
+    backgroundColor: 'white',
+    position: 'fixed',
+    zIndex: '1',
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    // flexDirection: 'row',
+    width: '100%',
+    // lineHeight: '64px',
+    // boxShadow: '0px 5px 20px #ddd',
+  },
+  navText: {
+    padding: '0px 20px',
   }
-`
-const Img = styled.img`
-  src: url(${props => props.src});
-  alt: 'HMS-Logo';
-`
+}
 
 const NavBar = () => (
-  <Header>
-    {/* <Img src="/images/logo.png" /> */}
+  <div style={styles.headerStyle}>
+    <img alt="HMS_logo" src="client/public/images/logo.png" />
     <Link href="/">
-      <NavStyle>หน้าแรก</NavStyle>
+      <h5 style={styles.navText}>หน้าแรก</h5 >
     </Link>
     <Link href="/about">
-      <NavStyle>เกี่ยวกับเรา</NavStyle>
+      <h5 style={styles.navText}>เกี่ยวกับเรา</h5 >
     </Link>
     <Link href="/">
-      <NavStyle>บทความ</NavStyle>
+      <h5 style={styles.navText}>บทความ</h5 >
     </Link>
     <Link href="/">
-      <NavStyle>แผนผังการเรียน</NavStyle>
+      <h5 style={styles.navText}>แผนผังการเรียน</h5 >
     </Link>
     <Link href="/">
-      <NavStyle>จองเวลาเรียน</NavStyle>
+      <h5 style={styles.navText}>จองเวลาเรียน</h5 >
     </Link>
     <Link href="/">
-      <NavStyle>ทำเนียบเด็กเก่ง</NavStyle>
+      <h5 style={styles.navText}>ทำเนียบเด็กเก่ง</h5 >
     </Link>
     <Link href="/">
-      <NavStyle>ประกาศคะแนนสอบ</NavStyle>
+      <h5 style={styles.navText}>ประกาศคะแนนสอบ</h5 >
     </Link>
     <Link href="/">
-      <NavStyle>ติดต่อเรา</NavStyle>
+      <h5 style={styles.navText}>ติดต่อเรา</h5 >
     </Link>
-  </Header>
+  </div>
 )
 
 export default NavBar

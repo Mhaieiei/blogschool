@@ -9,8 +9,7 @@ class Instructors extends Component {
     return (
       <div>
         <h1 style={{ textAlign:'center', height: '10px'}}> ครูผู้สอน </h1>
-        <h1 style={{ textAlign:'center', color: '#FFA500'}}> ______ </h1>   
-        
+        <h1 style={{ textAlign:'center', color: '#FFA500'}}> ______ </h1>
       </div>
     );
   }
